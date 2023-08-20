@@ -1,5 +1,12 @@
 ---
+import "../styles/global.css";
+
 const pageTitle = "About Me";
+
+const likes = ["retirement", "games", "making kids play games"];
+
+const likeColor = "navy";
+const fontWeight = "bold";
 ---
 
 <html lang="en">
@@ -8,6 +15,16 @@ const pageTitle = "About Me";
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <title>{pageTitle}</title>
+    <style define:vars={{ likeColor, fontWeight }}>
+      h1 {
+        color: purple;
+        font-size: 4rem;
+      }
+      .like {
+        color: var(--likeColor);
+        font-weight: var(--fontWeight);
+      }
+    </style>
   </head>
   <body>
     <a href="/">Home</a>
@@ -16,9 +33,7 @@ const pageTitle = "About Me";
     <h1>{pageTitle}</h1>
     <p>
       <ul>
-        <li>I am retired</li>
-        <li>I like games</li>
-        <li>I like making kids play games</li>
+        {likes.map((like) => <li class="like">I like {like}</li>)}
       </ul>
     </p>
   </body>
