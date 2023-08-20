@@ -4,9 +4,6 @@ import "../styles/global.css";
 const pageTitle = "About Me";
 
 const likes = ["retirement", "games", "making kids play games"];
-
-const likeColor = "navy";
-const fontWeight = "bold";
 ---
 
 <html lang="en">
@@ -15,14 +12,10 @@ const fontWeight = "bold";
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <title>{pageTitle}</title>
-    <style define:vars={{ likeColor, fontWeight }}>
+    <style>
       h1 {
         color: purple;
         font-size: 4rem;
-      }
-      .like {
-        color: var(--likeColor);
-        font-weight: var(--fontWeight);
       }
     </style>
   </head>
@@ -33,7 +26,7 @@ const fontWeight = "bold";
     <h1>{pageTitle}</h1>
     <p>
       <ul>
-        {likes.map((like) => <li class="like">I like {like}</li>)}
+        {likes.map((like) => <li>I like {like}</li>)}
       </ul>
     </p>
   </body>
