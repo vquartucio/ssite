@@ -1,0 +1,20 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+export async function getStaticPaths() {
+  const allEvents = await Astro.glob("../posts/*.md");
+  return [
+    { params: { tag: "games" }, props: { posts: allEvents } },
+    { params: { tag: "first time" }, props: { posts: allEvents } },
+    { params: { tag: "farmers market" }, props: { posts: allEvents } },
+    { params: { tag: "event" }, props: { posts: allEvents } },
+  ];
+}
+
+const { tag } = Astro.params;
+const { events } = Astro.props;
+---
+
+<BaseLayout pageTitle={tag}>
+  <p>Events Tagged with {tag}</p>
+</BaseLayout>

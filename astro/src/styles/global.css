@@ -1,5 +1,5 @@
 html {
-    background-color: #ffffdf;
+    background-color: #f3f3eb;
     font-family: sans-serif;
 }
 
@@ -24,6 +24,12 @@ li {
     color: "navy";
     font-weight: "bold";
     font-size: 1rem;
+}
+
+footer {
+    padding-top: 1em;
+    margin-top: 1em;
+    border-top: 1px solid #474443;
 }
 
 .center {
@@ -70,7 +76,7 @@ li {
 
 .nav-links a:hover,
 a:focus {
-    background-color: #fffff0;
+    background-color: #fffffb;
 }
 
 .expanded {

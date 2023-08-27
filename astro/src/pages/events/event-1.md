@@ -1,15 +1,14 @@
 ---
-title: 'My First Event'
+layout: ../../layouts/EventLayout.astro
+title: 'First Play-time'
 pubDate: 2022-08-14'
 description: 'Sue''s first event'
 author: 'VicQ'
 image:
     url: 'https://docs.astro.build/assets/full-logo-light.png'
     alt: 'The full Astro logo.'
-tags: ["games", "event", "first time"]
+tags: ["games", "event", "first time", "farmers market"]
 ---
-
-# My First Blog Post
 
 Published on: 2022-08-14
 
